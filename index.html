@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Website using A-Frame</title>
+    <title>Advanced 3D Website using A-Frame</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
   <body>
@@ -15,8 +15,8 @@
       <a-plane
         color="#7BC8A4"
         rotation="-90 0 0"
-        width="30"
-        height="30"
+        width="50"
+        height="50"
         position="0 0 -5"
       ></a-plane>
 
@@ -85,6 +85,29 @@
         intensity="1"
         position="2 4 -3"
       ></a-light>
+
+      <!-- Tree Model (GLTF) -->
+      <a-entity
+        gltf-model="url(https://cdn.aframe.io/link-tree.glb)"
+        position="0 0 -10"
+        scale="1 1 1"
+      ></a-entity>
+
+      <!-- Car Model (GLTF) -->
+      <a-entity
+        gltf-model="url(https://cdn.aframe.io/boxcar.glb)"
+        position="4 0 -10"
+        scale="1.5 1.5 1.5"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
+      ></a-entity>
+
+      <!-- Custom Model (GLTF) -->
+      <a-entity
+        gltf-model="url(https://cdn.aframe.io/models/boombox/scene.gltf)"
+        position="-4 0 -10"
+        scale="2 2 2"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 15000"
+      ></a-entity>
 
       <!-- Additional Objects -->
 
